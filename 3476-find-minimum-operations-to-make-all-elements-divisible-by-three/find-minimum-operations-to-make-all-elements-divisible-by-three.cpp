@@ -4,11 +4,9 @@ public:
         int minimumOperations = 0;
 
         for(int n : nums) {
-            if(n % 3 == 0) {
-                continue;
-            } else if (n % 3 == 1 || n % 3 == 2) {
+            if(n % 3 != 0) {
                 minimumOperations++;
-            }
+            }      
         }
 
         return minimumOperations;
