@@ -11,3 +11,8 @@ public:
         return answer;
     }
 };
+
+/*
+Take the previous binary number, shift it left (multiply by 2), 
+add the new bit, and keep only the remainder mod 5 to see if it's divisible.
+*/
