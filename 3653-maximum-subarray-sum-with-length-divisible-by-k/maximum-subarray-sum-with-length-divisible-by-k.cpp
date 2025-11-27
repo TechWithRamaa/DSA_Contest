@@ -14,10 +14,10 @@ public:
             int rem = i % k;
 
             if(minPrefix[rem] != LLONG_MAX) {
-                ans = max(ans, prefix - minPrefix[rem]);
+                ans = max(ans, prefix - minPrefix[rem]);    // prefix[4] - smallest previous
             }
 
-            minPrefix[rem] = min(minPrefix[rem], prefix);
+            minPrefix[rem] = min(minPrefix[rem], prefix);   // live calculation
         }
 
         return ans;
