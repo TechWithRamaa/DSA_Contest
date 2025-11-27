@@ -1,5 +1,6 @@
 class Solution {
 public:
+    // Length that are divisible by k can be multiple like k, 2k, 3k, 4k, etc
     long long maxSubarraySum(vector<int>& nums, int k) {
         int N = nums.size();
         vector<long long> minPrefix(k, LLONG_MAX);
