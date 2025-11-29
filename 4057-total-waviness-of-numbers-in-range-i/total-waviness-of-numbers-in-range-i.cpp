@@ -1,5 +1,6 @@
 class Solution {
 public:
+    // TC ~ O(N log N)
     int waviness(int x) {
         string s = to_string(x);
         int noOfDigits = s.size();
