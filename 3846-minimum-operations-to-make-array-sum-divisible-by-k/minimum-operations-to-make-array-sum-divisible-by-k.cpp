@@ -9,3 +9,31 @@ public:
         return r;
     }
 };
+
+
+/*
+✔️ When should you use safe modulo?
+
+You should use it anytime one of these can happen:
+
+* a might be negative
+* a might overflow into negative (e.g., subtracting large values)
+* you're using modulo for:
+    * circular arrays
+    * prefix sums with modulo
+    * hashing
+    * dp with modulo
+    * time or index wrapping
+    * remainder-based logic
+
+✔️ When it's NOT needed?
+
+If you're absolutely sure:
+    * the number a is non-negative
+    * and k is positive
+
+Then:
+    a % k
+
+is already safe.
+*/
