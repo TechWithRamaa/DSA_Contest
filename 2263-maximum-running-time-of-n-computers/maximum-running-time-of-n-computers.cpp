@@ -10,6 +10,7 @@ private:
         return have >= predictedTotalBatteryCapacity;
     }
 public:
+    // O(m).log(s/n)
     long long maxRunTime(int n, vector<int>& batteries) {
         long long totalBatteryCapacity = 0;
         for(int capacity : batteries) {
@@ -19,11 +20,11 @@ public:
         long long low = 0, high = (totalBatteryCapacity / n);
         long long maximumNoOfTimes = 0;
         
-        while(low <= high) {
+        while(low <= high) { // O log(totalBatteryCapacity / n)
             long long mid = low + (high - low) / 2;
             long long predictedMaximumNoOfTimes = mid;
 
-            bool verdict = isFeasibleForGiven(n, batteries, predictedMaximumNoOfTimes);
+            bool verdict = isFeasibleForGiven(n, batteries, predictedMaximumNoOfTimes); // O(no of batteries)
 
             if(verdict) {
                 low = mid + 1;
