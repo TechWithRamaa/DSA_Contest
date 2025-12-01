@@ -1,5 +1,6 @@
 class Solution {
 public:
+    // O(n)
     int minMoves(vector<int>& nums) {
         int mn = *min_element(nums.begin(), nums.end());
         long long moves = 0;
